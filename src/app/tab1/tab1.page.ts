@@ -18,4 +18,22 @@ export class Tab1Page {
             'background-color': `rgb(${this.redVal}, ${this.greenVal}, ${this.blueVal})`
         };
     }
+
+    redColor() {
+        return {
+            'background-color': `rgb(${this.redVal}, 0, 0)`
+        };
+    }
+
+    greenColor() {
+        return {
+            'background-color': `rgb(0, ${this.greenVal}, 0)`
+        };
+    }
+
+    blueColor() {
+        return {
+            'background-color': `rgb(0, 0, ${this.blueVal})`
+        };
+    }
 }

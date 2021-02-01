@@ -10,30 +10,32 @@
         <div class="d-flex flex--1 ion-align-items-center ion-justify-content-center">
             <div class="color__plate" [ngStyle]="calculate()"></div>
         </div>
-        <ion-list class="flex--1">
-            <ion-item>
-                <ion-range min="0" max="200" [(ngModel)]="redVal" color="red">
-                    <ion-label slot="start">0</ion-label>
-                    <ion-label slot="end">255</ion-label>
-                </ion-range>
-            </ion-item>
-
-            <ion-item>
-                <ion-range min="0" max="200" [(ngModel)]="greenVal" color="green">
-                    <ion-label slot="start">0</ion-label>
-                    <ion-label slot="end">255</ion-label>
-                </ion-range>
-            </ion-item>
-
-            <ion-item>
-                <ion-range min="0" max="200" [(ngModel)]="blueVal" color="blue">
-                    <ion-label slot="start">0</ion-label>
-                    <ion-label slot="end">255</ion-label>
-                </ion-range>
-            </ion-item>
-
-        </ion-list>
-
-
+        <div class="flex--1">
+            <div class="d-flex ion-justify-content-around ion-margin-vertical">
+                <div class="round" [style]="redColor()"></div>
+                <div class="round" [style]="greenColor()">b</div>
+                <div class="round" [style]="blueColor()">c</div>
+            </div>
+            <ion-list>
+                <ion-item lines="none">
+                    <ion-range min="0" max="200" [(ngModel)]="redVal" color="red">
+                        <ion-label slot="start">0</ion-label>
+                        <ion-label slot="end">255</ion-label>
+                    </ion-range>
+                </ion-item>
+                <ion-item lines="none">
+                    <ion-range min="0" max="200" [(ngModel)]="greenVal" color="green">
+                        <ion-label slot="start">0</ion-label>
+                        <ion-label slot="end">255</ion-label>
+                    </ion-range>
+                </ion-item>
+                <ion-item lines="none">
+                    <ion-range min="0" max="200" [(ngModel)]="blueVal" color="blue">
+                        <ion-label slot="start">0</ion-label>
+                        <ion-label slot="end">255</ion-label>
+                    </ion-range>
+                </ion-item>
+            </ion-list>
+        </div>
     </div>
 </ion-content>
