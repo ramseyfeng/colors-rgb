@@ -1,17 +1,39 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+        <ion-title>
+            Tab 1
+        </ion-title>
     </ion-toolbar>
-  </ion-header>
+</ion-header>
+<ion-content [fullscreen]="true" class="d-flex flex--1">
+    <div class="wrapper flex--1 h--100">
+        <div class="d-flex flex--1 ion-align-items-center ion-justify-content-center">
+            <div class="color__plate" [ngStyle]="calculate()"></div>
+        </div>
+        <ion-list class="flex--1">
+            <ion-item>
+                <ion-range min="0" max="200" [(ngModel)]="redVal" color="red">
+                    <ion-label slot="start">0</ion-label>
+                    <ion-label slot="end">255</ion-label>
+                </ion-range>
+            </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+            <ion-item>
+                <ion-range min="0" max="200" [(ngModel)]="greenVal" color="green">
+                    <ion-label slot="start">0</ion-label>
+                    <ion-label slot="end">255</ion-label>
+                </ion-range>
+            </ion-item>
+
+            <ion-item>
+                <ion-range min="0" max="200" [(ngModel)]="blueVal" color="blue">
+                    <ion-label slot="start">0</ion-label>
+                    <ion-label slot="end">255</ion-label>
+                </ion-range>
+            </ion-item>
+
+        </ion-list>
+
+
+    </div>
 </ion-content>
