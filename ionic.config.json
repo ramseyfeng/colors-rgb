@@ -1,0 +1,7 @@
+{
+  "name": "colors-rgb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
